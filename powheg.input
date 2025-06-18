@@ -1,4 +1,4 @@
-numevts 1000000       ! number of events to be generated
+numevts 2000000000       ! number of events to be generated
 ih1  1               ! hadron 1 (1 for protons, -1 for antiprotons)
 ih2  1               ! hadron 2 (1 for protons, -1 for antiprotons)
 ebeam1 6800d0    ! energy of beam 1
@@ -87,4 +87,4 @@ doublefsr 1          ! Default 0; if 1 use new mechanism to generate regions
 par_diexp 4         ! default is 2. With 4 there is a stronger separation
 par_dijexp 4        ! of regions, it may help to reduce spikes when generating
 par_2gsupp 4        ! weighted events.
-iseed 3426
+iseed 14101

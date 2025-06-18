@@ -211,6 +211,7 @@ void RunPythia8(int nev = 5000, Char_t const *foutname = "Pythia8JetSpectra.root
   //
 
   // Event loop
+  std::cout << "nevents: " << nev << std::endl;
   for (int iev = 0; iev < nev; iev++)
   {
     // Generate the next event
@@ -218,8 +219,10 @@ void RunPythia8(int nev = 5000, Char_t const *foutname = "Pythia8JetSpectra.root
     {
 
       // If failure because reached end of file then exit event loop
-      if (pythia8->info.atEndOfFile())
+      if (pythia8->info.atEndOfFile()) {
+        std::cout << "it has to stop because reached end of file" << std::endl;
         break;
+      }
 
       // Otherwise count event failure and continue/exit as necessary
       std::cout << "Warning: event " << iev << " failed" << std::endl;
